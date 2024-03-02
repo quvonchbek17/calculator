@@ -1,0 +1,30 @@
+.calc, form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    background-color: #15636D;
+    width: 100px;
+    height: 80px;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+
+.phone-link {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #15636D;
+}
+
+.phone-animation {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+}
