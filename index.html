@@ -13,36 +13,58 @@
     />
   </head>
   <body>
-    <div class="container pt-2">
-      <div class="calc ">
-        <h1 class="text-success mb-5 text-center">Calculator</h1>
 
-        <form class="calc-form mb-5">
-
-          <select required class="money-type form-select mb-3" name="" id="">
-            <option selected disabled>Kiritiladigan pul birligi</option>
-            <option value="usz">O'zbek so'mi</option>
-            <option value="usd">AQSH dollari</option>
-          </select>
-
-          <input required class="money-input form-control mb-3" type="number" min="0" placeholder="Miqdorni kiriting">
-
-          <button class="btn btn-success">Hisoblash</button>
-        </form>
-
-        <div class="results">
-
-            <h2 class="result-usz-12-month mb-3"></h2>
-            <h2 class="result-usz-6-month mb-3"></h2>
+    <header class="header">
+        <div class="container header_container">
+          <img class="footer-logo" src="./images/logo.png" alt="logo">
+          <h5 >Calculator</h5>
         </div>
+    </header>
+
+    <main class="main">
+      <div class="container pt-2">
+        <div class="calc ">
+          <form class="calc-form mb-3">
+
+            <select required class="money-type form-select mb-3" name="" id="">
+              <option selected disabled>Kiritiladigan pul birligi</option>
+              <option value="usz">O'zbek so'mi</option>
+              <option value="usd">AQSH dollari</option>
+            </select>
+
+            <input required class="money-input form-control mb-3" type="number" min="0" placeholder="Miqdorni kiriting">
+
+            <button class="btn btn-success">Hisoblash</button>
+          </form>
+
+          <div class="results">
+
+              <h2 class="result-usz-12-month mb-3"></h2>
+              <h2 class="result-usz-6-month mb-3"></h2>
+          </div>
 
 
-        <img class="logo" src="./images/logo.png" alt="logo">
+          <img class="logo" src="./images/logo.png" alt="logo">
 
-        <a class="phone-link" href="tel:+998908287878">+998908287878 <img class="phone-animation" src="./images/icons8-phone.gif" alt="image"></a>
+          <a class="phone-link" href="tel:+998908287878">+998908287878 <img class="phone-animation" src="./images/icons8-phone.gif" alt="image"></a>
 
+        </div>
       </div>
-    </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer_container">
+        <img class="footer-logo" src="./images/logo.png" alt="logo">
+        <div class="footer-left">
+           <!-- <p>Ijtimoy tarmoqlar</p> -->
+           <div class="medias">
+             <a class="media-link" href="https://www.instagram.com/texnoup"><img src="./images/instagram.png" alt="instagram"></a>
+             <a class="media-link" href="https://t.me/TexnoUp"><img src="./images/telegram.png" alt="instagram"></a>
+           </div>
+        </div>
+      </div>
+    </footer>
+
 
     <script src="./index.js"></script>
   </body>

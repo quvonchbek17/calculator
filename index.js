@@ -13,16 +13,14 @@ calcForm.addEventListener("submit", function(e) {
         let money = moneyInput.value*1
         if(type == "usz"){
             let sum12 = ((money/0.85) + 0.44)*0.12
-            let sum6 = ((money/0.85) + 0.26)*0.6
-            result12Month.textContent = `12 oyga: ${sum12.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} so'm`
-            result6Month.textContent = `6 oyga: ${sum6.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} so'm`
+            let sum6 = ((money/0.85)*1.26)/6
+            result12Month.textContent = `12 oyga: ${Math.floor(sum12).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} so'm`
+            result6Month.textContent = `6 oyga: ${Math.floor(sum6).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} so'm`
         } else if(type == "usd"){
-            let sum12 = ((money*12600/0.85) + 0.44)*0.12
-            let sum6 = ((money*12600/0.85) + 0.26)*0.6
-            console.log(sum12);
-            console.log(sum6);
-            result12Month.textContent = `12 oyga: ${sum12.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} so'm`
-            result6Month.textContent = `6 oyga: ${sum6.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} so'm`
+            let sum12 = ((money*12600/0.85) +0.44)*0.12
+            let sum6 = ((money*12600/0.85)*1.26)/6
+            result12Month.textContent = `12 oyga: ${Math.floor(sum12).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} so'm`
+            result6Month.textContent = `6 oyga: ${Math.floor(sum6).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} so'm`
         }
     } else {
         alert("Pul birligini tanlang !")
@@ -34,3 +32,20 @@ calcForm.addEventListener("submit", function(e) {
 moneySelect.addEventListener("change", function(e){
     type = e.target.value
 })
+
+// moneyInput.addEventListener("input", function(e){
+//                let value
+
+//                if(moneyInput.placeholder == "Miqdorni kiriting"){
+//                 value = moneyInput.value;
+//                } else {
+//                  value = moneyInput.placeholder.split(" ").push(moneyInput.value).filter(el => el != " ").join("")
+//                }
+//                value = value.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+//                if(moneyInput.placeholder == "Miqdorni kiriting"){
+//                 moneyInput.placeholder = value
+//                } else if(moneyInput.placeholder == ""){
+//                 moneyInput.placeholder = "Miqdorni kiriting"
+//                 moneyInput.value = "";
+//                }
+// })
