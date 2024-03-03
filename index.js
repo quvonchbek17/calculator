@@ -11,7 +11,6 @@ calcForm.addEventListener("submit", function (e) {
 
   if (type != "") {
     let money = moneyInput.value.replace(/\D/g, "") * 1;
-    console.log(money);
     if (type == "usz") {
       let sum12 = (money / 0.85 + 0.44) * 0.12;
       let sum6 = ((money / 0.85) * 1.26) / 6;
